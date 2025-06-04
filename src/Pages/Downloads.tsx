@@ -77,66 +77,77 @@ function Downloads() {
     ]
 
     return (
-        <section className='mt-5 meetteam' style={{ backgroundColor: '#aae0f4 ', padding: '30px' }} id='Documents'>
-            <h1 style={{ marginLeft: '8%' }} className='mb-5'>Downloads</h1>
-
-            <h4 style={{ marginLeft: '10%' }}>Documents</h4>
-            <p style={{ marginLeft: '10%' }}>Please find all documents related to this project below.</p>
-            <div className=" mt-4" style={{ marginInlineStart: '14%', marginInlineEnd: '14%' }}>
-                <div className="row">
-                    {documents.map((document) => (
-                        <div className="col-xs-12 col-sm-3 mb-5">
-                            <div className="card carddowndolad d-flex flex-column h-100">
-                                <div className="card-content" style={{ height: '150px' }}>
-                                    <h5 className=" mb-3"> <i className="fas fa-file-alt me-2 docicon"></i> {document?.name}</h5>
-                                    <p style={{ fontSize: '14px', color: "gray" }}>
-                                        Submitted on {document?.submittionDate}
-                                    </p>
-
-                                </div>
-                                <div className="card-read-more">
-                                    <p style={{ fontSize: '15px', color: 'black', textDecoration: 'none', fontWeight: '500' }} className="btn btn-link btn-block ms-2">
-                                        {document?.grouporindi}
-                                    </p>
-                                    <p style={{ fontSize: '15px', color: '#090f49', float: 'right', textDecoration: 'none' }} className="btn btn-link btn-block" onClick={() => { window.open(`${document?.link}`) }}>
-                                        <i className="fas fa-download me-1"></i> Download
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+    <section className="section-bg" id="Documents">
+      <h1 className="section-title">Downloads</h1>
+      <div className="container">
+        <h4 className="mb-3" style={{ color: '#00695C', fontWeight: 600 }}>Documents</h4>
+        <p className="mb-4">Explore all project-related documents below.</p>
+        <div className="row">
+          {documents.map((document) => (
+            <div className="col-md-4 mb-4" key={document.name}>
+              <div className="card carddowndolad h-100">
+                <div className="card-content">
+                  <h5 className="card-title">
+                    <i className="fas fa-file-alt me-2 docicon" style={{ color: '#FF6F61' }}></i> {document.name}
+                  </h5>
+                  <p style={{ fontSize: '0.9rem', color: '#666' }}>
+                    Submitted on {document.submittionDate}
+                  </p>
                 </div>
-            </div>
-
-            <h4 style={{ marginLeft: '10%' }} id='Presentations'>Presentations</h4>
-            <p style={{ marginLeft: '10%' }}>Please find all presentations related this project below.</p>
-            <div className=" mt-4" style={{ marginInlineStart: '14%', marginInlineEnd: '14%' }}>
-                <div className="row">
-                    {presentations.map((presentation) => (
-                        <div className="col-xs-12 col-sm-3 mb-5">
-                            <div className="card carddowndolad d-flex flex-column h-100">
-                                <div className="card-content" style={{ height: '150px' }}>
-                                    <h5 className=" mb-3"> <i className="fas fa-file-alt me-2 docicon"></i> {presentation?.name}</h5>
-                                    <p style={{ fontSize: '14px', color: "gray" }}>
-                                        Submitted on {presentation?.submittionDate}
-                                    </p>
-
-                                </div>
-                                <div className="card-read-more">
-                                    <p style={{ fontSize: '15px', color: 'black', textDecoration: 'none', fontWeight: '500' }} className="btn btn-link btn-block ms-2">
-                                        {presentation?.grouporindi}
-                                    </p>
-                                    <p style={{ fontSize: '15px', color: '#090f49', float: 'right', textDecoration: 'none' }} className="btn btn-link btn-block" onClick={() => { window.open(`${presentation?.link}`) }}>
-                                        <i className="fas fa-download me-1"></i> Download
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
+                <div className="card-read-more">
+                  <span style={{ fontSize: '0.9rem', fontWeight: 500, color: '#00695C' }}>
+                    {document.grouporindi}
+                  </span>
+                  <a
+                    href={document.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                  >
+                    <i className="fas fa-download me-1"></i> Download
+                  </a>
                 </div>
+              </div>
             </div>
-        </section>
-    )
+          ))}
+        </div>
+
+        <h4 className="mb-3 mt-5" style={{ color: '#00695C', fontWeight: 600 }} id="Presentations">
+          Presentations
+        </h4>
+        <p className="mb-4">Discover all project presentations below.</p>
+        <div className="row">
+          {presentations.map((presentation) => (
+            <div className="col-md-4 mb-4" key={presentation.name}>
+              <div className="card carddowndolad h-100">
+                <div className="card-content">
+                  <h5 className="card-title">
+                    <i className="fas fa-file-alt me-2 docicon" style={{ color: '#FF6F61' }}></i> {presentation.name}
+                  </h5>
+                  <p style={{ fontSize: '0.9rem', color: '#666' }}>
+                    Submitted on {presentation.submittionDate}
+                  </p>
+                </div>
+                <div className="card-read-more">
+                  <span style={{ fontSize: '0.9rem', fontWeight: 500, color: '#00695C' }}>
+                    {presentation.grouporindi}
+                  </span>
+                  <a
+                    href={presentation.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary"
+                  >
+                    <i className="fas fa-download me-1"></i> Download
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Downloads
+export default Downloads;

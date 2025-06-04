@@ -1,19 +1,24 @@
-/* hero background image */
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #F9F9F9 0%, #E0F7FA 100%);
+  color: #0A0A56;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
 .bgimage {
   height: 100vh;
-  background: url('https://scribemedia.com/wp-content/uploads/2022/03/How-to-Publish-an-Audiobook-in-5-Steps-700x406.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover;
+  background-position: center;
   position: relative;
-  
-}
-
-/* text css above hero image*/
-.hero_title {
-  font-size: 4.5rem;
-}
-
-.hero_desc {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-text {
@@ -22,601 +27,362 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #FFF;
 }
 
-/* hero background image end */
+.hero_title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+}
 
-/* about section image css */
+.hero_desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  color: #FFD54F;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* General Section Styling */
+section {
+  padding: 3rem 0;
+  position: relative;
+  background: linear-gradient(180deg, rgba(30, 136, 229, 0.1) 0%, rgba(255, 111, 97, 0.1) 100%);
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1E88E5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Card Styling */
+.card {
+  background: #FFFFFF;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1E88E5;
+  margin-bottom: 1rem;
+}
+
+.card-read-more {
+  border-top: 1px solid #E0E0E0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background: #FF6F61;
+  color: #FFF;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #FF5252;
+}
+
+/* About Section Image */
 .imageAboutPage {
   width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* about section image css  end*/
-
-
-/*===================== Progress Bar ====================*/
-
+/* Progress Bar */
 .progress {
   border-radius: 10px;
+  background: #E0E0E0;
 }
 
-.progress .progress-bar {
-  width: 0px;
+.progress-bar {
+  background: #4CAF50 !important;
   border-radius: 10px;
-  transition: 2s;
+  transition: width 2s ease-in-out;
 }
 
-/*===================== Progress Bar end====================*/
-
-
-.intro h1.animate {
-  overflow: hidden;
-  animation: reveal 1s ease-in-out;
-}
-
-@keyframes reveal {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-
-
-
-/* CSS for main section */
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  height: 720px;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGIzbnByeDdyNmU2NmljbHBmd2JsbGlxYmU0Ym9jM2x6N2lqZ3I5MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sdIwMGxr0WZXjoYt5A/giphy.gif");
-  background-size: cover;
-  background-position: relative;
-  background-repeat: no-repeat;
-}
-
-.intro h1 {
-  font-family: sans-serif;
-  font-size: 60px;
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.intro p {
-  font-size: 20px;
-  color: #d1d1d1;
-  text-transform: uppercase;
-  margin: 20px 0;
-}
-
+/* Achievements Section (Research Gap) */
 .achievements {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 5%;
 }
 
 .achievements .work {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 0 40px;
+  text-align: center;
+  padding: 1.5rem;
+  background: #FFF;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.achievements .work i {
-  width: fit-content;
-  font-size: 50px;
-  color: #14919B;
-  padding: 12px;
+.achievements .work:hover {
+  transform: translateY(-5px);
 }
 
-.achievements .work .work-heading {
-  font-size: 20px;
-  color: #333333;
-  text-transform: uppercase;
-  margin: 10px 0;
+.achievements .work img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
 }
 
-.achievements .work .work-text {
-  font-size: 15px;
+.achievements .work-heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00695C;
+  margin-bottom: 0.5rem;
+}
+
+.achievements .work-text {
+  font-size: 0.9rem;
   color: #585858;
-  margin: 10px 0;
   text-align: justify;
 }
 
-/* CSS for main section end*/
-
-
-/* services section css */
+/* Services Section */
 .servicesText.card {
-  height: 250px;
-  cursor: pointer;
-  
+  height: auto;
+  padding: 1.5rem;
 }
 
 .servicesIcon {
-  font-size: 36px;
-  text-align: center;
-  width: 100%;
-}
-
-.card-title {
-  text-align: center;
+  font-size: 2rem;
+  color: #FF6F61;
+  margin-bottom: 1rem;
 }
 
 .card:hover .servicesIcon {
-  color: #14919B;
+  color: #1E88E5;
 }
 
 .servicesText:hover {
-  border: 1px solid #14919B;
+  border: 1px solid #1E88E5;
 }
 
-/* services section css end */
-
-
-/* my projects css */
-.accordion {
-  margin: 40px 0;
-}
-
+/* Accordion (Projects) */
 .accordion .item {
-  border: none;
-  margin-bottom: 50px;
-  background: none;
+  margin-bottom: 2rem;
 }
 
-.t-p {
-  color: rgb(135, 135, 135);
-  padding: 40px 30px 0px 30px;
-}
-
-.accordion .item .item-header h2 button.btn.btn-link {
-  background: #333435;
-  color: white;
-  border-radius: 0px;
-  font-family: 'Poppins';
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 2.5;
-  text-decoration: none;
-}
-
-.accordion .item .item-header {
-  border-bottom: none;
-  background: transparent;
-  padding: 0px;
-  margin: 2px;
-}
-
-.accordion .img-fluid {
-  width: 100%
-}
-
-.accordion .item .item-header h2 button {
-  color: white;
-  font-size: 20px;
-  padding: 15px;
-  display: block;
-  width: 100%;
-  text-align: left;
-}
-
-.accordion .item .item-header h2 i {
-  float: right;
-  font-size: 30px;
-  color: #eca300;
-  background-color: black;
-  width: 60px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-
-button.btn.btn-link.collapsed i {
-  transform: rotate(0deg);
-}
-
-button.btn.btn-link i {
-  transform: rotate(180deg);
-  transition: 0.5s;
-}
-
-/* end */
-
-
-
-/* my projects css */
 .accordion .card {
-  color: #424e5d;
-  border: 1px solid #dddddd;
-}
-
-.accordion .card a {
-  color: #424e5d;
-  text-decoration: none;
+  border: none;
+  border-radius: 10px;
 }
 
 .accordion .card-header {
-  background: linear-gradient(#fff, #f1f1f1);
-  padding: .75rem 1rem;
-  position: relative;
+  background: linear-gradient(90deg, #1E88E5 0%, #4CAF50 100%);
+  color: #FFF;
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
 }
 
 .accordion .card-header:hover {
-  background: linear-gradient(#f1f1f1, #e8e8e8);
+  background: linear-gradient(90deg, #1565C0 0%, #388E3C 100%);
 }
 
 .accordion .card-header h2 {
-  font-size: 1rem;
-}
-
-.accordion .fa {
-  width: 20px;
-  margin-right: .25rem;
-}
-
-.accordion .card-header a {
-  float: left;
-  width: 100%;
-  cursor: pointer;
-}
-
-.accordion .toggle {
-  font-size: .8rem;
-  line-height: .8rem;
-  cursor: pointer;
-  opacity: 0.7;
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  width: 14px;
+  font-size: 1.2rem;
   margin: 0;
 }
 
-.accordion .toggle:hover {
-  opacity: 1;
-}
-
 .accordion .card-body {
-  padding: 0;
+  padding: 1.5rem;
+  background: #F9F9F9;
 }
 
 .accordion .list-group-item {
-  border-radius: 0;
-  border-width: 1px 0 1px 0;
-  padding-left: 30px;
-  background: #d6dbe0;
-  font-weight: 500;
+  background: #FFF;
+  border: none;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
 
 .accordion .list-group-item:hover {
-  background: #007bff;
+  background: #E0F7FA;
 }
 
-.accordion .list-group-item:hover a {
-  color: #fff !important;
-}
-
-.accordion .list-group-item:hover .badge {
-  background: #fff;
-  color: #007bff;
-}
-
-.accordion .list-group-item a {
-  color: #61656b;
-  display: block;
-}
-
-.accordion .list-group-item .badge {
-  float: right;
-  min-width: 36px;
-}
-
-.accordion .rotate {
-  transform: rotate(180deg);
-}
-
-/* my projects css end */
-
-
-/*
-*
-* ==========================================
-* CUSTOM UTIL CLASSES
-* ==========================================
-*/
-.nav-pills-custom .nav-link {
-  color: #aaa;
-  background: #fff;
-  position: relative;
-}
-
-.nav-pills-custom .nav-link.active {
-  color: #14919B;
-  background: #ffffff53;
-}
-
-
-/* Add indicator arrow for the active tab */
-@media (min-width: 992px) {
-  .nav-pills-custom .nav-link::before {
-    content: '';
-    display: block;
-    border-top: 8px solid transparent;
-    border-left: 10px solid #fff;
-    border-bottom: 8px solid transparent;
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-}
-
-.nav-pills-custom .nav-link.active::before {
-  opacity: 1;
-}
-
-
-.project-image-container {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 10px;
-}
-
-.project-image-container img {
-  max-width: 100%;
-  height: 250px;
-}
-
-
-
-/*
-*
-* ==========================================
-* FOR DEMO PURPOSE
-* ==========================================
-*/
-
-/* meet team css */
-.meetteam {}
-
+/* Meet Our Team */
 .meetteam .card {
-  display: block;
-  margin-bottom: 20px;
-  line-height: 1.42857143;
-  background-color: #fff;
-  border-radius: 2px;
-  transition: box-shadow .25s;
-  width: 85%
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 15px;
 }
 
 .meetteam .carddowndolad {
-  display: block;
-  margin-bottom: 20px;
-  line-height: 1.42857143;
-  background-color: #fff;
-  border-radius: 2px;
-  transition: .19s;
   width: 100%;
-  cursor: pointer;
-
+  transition: transform 0.3s ease;
 }
 
 .meetteam .carddowndolad:hover {
-  scale: 1.06;
+  transform: scale(1.05);
 }
 
 .meetteam .carddowndolad:hover .docicon {
-  color: #14919B;
-  transition: 0.3s;
+  color: #1E88E5;
 }
 
 .meetteam .img-card {
-  width: 100%;
-  height: 250px;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  display: block;
+  height: 200px;
   overflow: hidden;
+  border-radius: 15px 15px 0 0;
 }
 
 .meetteam .img-card img {
   width: 100%;
-  height: 250px;
+  height: 100%;
   object-fit: cover;
-  object-position: top;
-  transition: all .25s ease;
+  transition: transform 0.3s ease;
+}
+
+.meetteam .img-card img:hover {
+  transform: scale(1.1);
 }
 
 .meetteam .card-content {
-  padding: 15px;
-  text-align: left;
+  padding: 1.5rem;
 }
 
 .meetteam .card-title {
-  margin-top: 0px;
-  font-weight: 700;
-  font-size: 15px;
-  text-align: left;
-}
-
-.meetteam .card-title a {
-  color: #000;
-  text-decoration: none !important;
-}
-
-.meetteam .card-read-more {
-  border-top: 1px solid #D4D4D4;
-  height: 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00695C;
 }
 
 .meetteam .card-read-more a {
-  text-decoration: none !important;
-  padding: 10px;
-  font-weight: 600;
-  text-transform: uppercase
+  font-size: 0.9rem;
+  color: #FF6F61;
 }
 
-/* meet team css end */
+.meetteam .card-read-more a:hover {
+  color: #FF5252;
+}
 
-/*Objectives css */
-
-.objectives {}
-
+/* Objectives Section */
 .objectives .circle {
-  padding: 13px 20px;
+  padding: 15px 20px;
   border-radius: 50%;
-  background-color: #14919B;
-  color: #fff;
-  max-height: 50px;
-  z-index: 1;
-}
-
-.objectives .how-it-works.row .col-2 {
-  align-self: stretch;
+  background: #FF6F61;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .objectives .how-it-works.row .col-2::after {
-  content: "";
-  position: absolute;
-  border-left: 3px solid #c5cf42;
-  z-index: 2;
-}
-
-.objectives .how-it-works.row .col-2.bottom::after {
-  height: 50%;
-  left: 50%;
-  top: 50%;
-}
-
-.objectives .how-it-works.row .col-2.full::after {
-  height: 100%;
-  left: calc(50% - 3px);
-}
-
-.objectives .how-it-works.row .col-2.top::after {
-  height: 50%;
-  left: 50%;
-  top: 0;
-}
-
-
-.objectives .timeline div {
-  padding: 0;
-  height: 40px;
+  border-left: 3px solid #FFD54F;
 }
 
 .objectives .timeline hr {
-  border-top: 3px solid #14919B;
-  margin: 0;
-  top: 17px;
-  position: relative;
-}
-
-.objectives .timeline .col-2 {
-  display: flex;
-  overflow: hidden;
+  border-top: 3px solid #1E88E5;
 }
 
 .objectives .timeline .corner {
-  border: 3px solid #cbce2f;
-  width: 100%;
-  position: relative;
-  border-radius: 15px;
+  border: 3px solid #FF6F61;
+  border-radius: 10px;
 }
 
-.objectives .timeline .top-right {
-  left: 50%;
-  top: -50%;
-}
-
-.objectives .timeline .left-bottom {
-  left: -50%;
-  top: calc(50% - 3px);
-}
-
-.objectives .timeline .top-left {
-  left: -50%;
-  top: -50%;
-}
-
-.objectives .timeline .right-bottom {
-  left: 50%;
-  top: calc(50% - 3px);
-}
-
-/*Objectives css end */
-
-
-/*Time line css*/
-
-.timelinecss {}
-
+/* Timeline Section */
 .timelinecss ul.timeline {
-  list-style-type: none;
-  position: relative;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
 }
-
 
 .timelinecss ul.timeline:before {
-  content: ' ';
-  background: #d5840b;
-  display: inline-block;
-  position: absolute;
-  left: 16px;
-  width: 4px;
-  height: 100%;
-  border-radius: 1rem;
-  z-index: 1;
+  background: #4CAF50;
+  width: 5px;
+  border-radius: 5px;
 }
 
 .timelinecss li.timeline-item {
-  margin: 30px;
+  background: #FFF;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.timelinecss li.timeline-item:hover {
+  transform: translateX(10px);
 }
 
 .timelinecss .timeline-arrow {
+  border-right: 0.9rem solid #FF6F61;
   border-top: 0.5rem solid transparent;
-  border-right: 0.9rem solid #cf6d12;
   border-bottom: 0.5rem solid transparent;
-  display: block;
-  position: absolute;
-  left: 2rem;
 }
 
 .timelinecss li.timeline-item::before {
-  content: ' ';
-  background: #ffffff;
-  display: inline-block;
-  position: absolute;
-  border-radius: 50%;
-  border: 4px solid #9f5f2e;
-  left: 5px;
-  width: 25px;
-  height: 25px;
-  z-index: 2;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 4px solid #1E88E5;
+  width: 20px;
+  height: 20px;
 }
 
 .timelinecss .text-gray {
-  color: #262424;
+  color: #00695C;
+  font-weight: 600;
 }
 
-/*Time line css end*/
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero_title {
+    font-size: 2.5rem;
+  }
+  .hero_desc {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .achievements {
+    grid-template-columns: 1fr;
+  }
+  .meetteam .card {
+    width: 100%;
+  }
+}

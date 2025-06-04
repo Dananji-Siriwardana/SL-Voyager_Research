@@ -14,16 +14,16 @@ function MeetOurTeam() {
         {
             name: 'Ms. Thilini Jayalath',
             position: 'Supervisor',
-            image: 'https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=7xdb5PAAAAAJ&citpid=2',
-            department: 'Information Technology',
+            image: '',
+            department: 'Software Engineering',
             scholarLink: 'https://scholar.google.com/citations?hl=en&user=7xdb5PAAAAAJ',
             email: 'mailto:thilini.j@sliit.lk'
         },
         {
             name: 'Dr. Lakmini Abeywardhana',
             position: 'Co_Supervisor',
-            image: 'https://static.sliit.lk/profile/lakminid-1627632446.jpg',
-            department: 'Software Engineering',
+            image: '',
+            department: 'Computer Science',
             scholarLink: 'https://scholar.google.com/citations?hl=en&user=oiEXkr4AAAAJ',
             email: 'mailto:lakmini.d@sliit.lk'
         }
@@ -51,22 +51,13 @@ function MeetOurTeam() {
             image: '/member3.jpg',
             department: 'Information Technology',
             email: 'mailto:dananjisiriwardana412@gmail.com'
-        },
-        {
-            name: 'Shashika Weerakoon',
-            position: 'Group Member',
-            image: '',
-            department: 'Information Technology',
-            email: 'mailto:'
         }
     ];
 
     const renderCard = (person: TeamMember, showScholar: boolean) => (
     <div className="col-xs-12 col-sm-3" key={person.name}>
         <div className="card d-flex flex-column h-100">
-            <a className="img-card">
-                <img src={person.image} alt={person.name} />
-            </a>
+            
             <div className="card-content">
                 <h4 className="card-title mb-3">{person.name}</h4>
                 <img
@@ -109,9 +100,7 @@ function MeetOurTeam() {
                 )}
             </div>
         </div>
-    </div>
-);
-
+    </div>);
 
     return (
         <section className="mt-5 meetteam" id="aboutus">
